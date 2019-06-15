@@ -3,4 +3,6 @@
     <string name="font_thin" translatable="false">Roboto-Thin.ttf</string>
     <string name="font_regular" translatable="false">Roboto-Regular.ttf</string>
     <string name="font_black" translatable="false">Roboto-Black.ttf</string>
+    <string name="error_something_went_wrong">Something went wrong at our end!</string>
+    <string name="retry">Retry</string>
 </resources>
