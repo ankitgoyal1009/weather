@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="background">#f5f6f7</color>
+    <color name="error_retry_btn_background">#4a4a4a</color>
+    <color name="error_background">#E85959</color>
+
+    <color name="primary_txt_color">#2a2a2a</color>
+    <color name="secondary_txt_color">#556799</color>
+
+
 </resources>

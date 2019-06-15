@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">Weather</string>
+    <string name="font_thin" translatable="false">Roboto-Thin.ttf</string>
+    <string name="font_regular" translatable="false">Roboto-Regular.ttf</string>
+    <string name="font_black" translatable="false">Roboto-Black.ttf</string>
 </resources>

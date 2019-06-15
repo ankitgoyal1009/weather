@@ -1,19 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <com.sample.gojeck.sampleapp.view.CustomTextView
+        android:id="@+id/today_temp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_marginTop="@dimen/height_56dp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/primary_txt_color"
+        android:textSize="@dimen/font_96sp"
+        app:fontName="@string/font_black"
+        tools:text="21"/>
 
-</android.support.constraint.ConstraintLayout>
+    <com.sample.gojeck.sampleapp.view.CustomTextView
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/today_temp"
+        android:gravity="center_horizontal"
+        android:textColor="@color/secondary_txt_color"
+        android:textSize="@dimen/font_36sp"
+        app:fontName="@string/font_thin"
+        tools:text="Bangalore"/>
+
+    <LinearLayout
+        android:id="@+id/forecast_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/city"
+        android:layout_marginTop="@dimen/height_62dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_16dp">
+
+        <include
+            android:id="@+id/day1"
+            layout="@layout/forecast"/>
+
+        <include
+            layout="@layout/divider"/>
+
+        <include
+            android:id="@+id/day2"
+            layout="@layout/forecast"/>
+
+        <include
+            layout="@layout/divider"/>
+
+        <include
+            android:id="@+id/day3"
+            layout="@layout/forecast"/>
+
+        <include
+            layout="@layout/divider"/>
+
+        <include
+            android:id="@+id/day4"
+            layout="@layout/forecast"/>
+
+        <include
+            layout="@layout/divider"/>
+    </LinearLayout>
+
+</RelativeLayout>

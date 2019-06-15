@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/height_80dp">
+
+    <com.sample.gojeck.sampleapp.view.CustomTextView
+        android:id="@+id/day"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.8"
+        android:gravity="center_vertical"
+        android:textColor="@color/primary_txt_color"
+        android:textSize="@dimen/font_16sp"
+        tools:text="Wednesday"/>
+
+    <com.sample.gojeck.sampleapp.view.CustomTextView
+        android:textColor="@color/primary_txt_color"
+        android:id="@+id/temp"
+        android:textSize="@dimen/font_16sp"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="0.2"
+        android:gravity="center_vertical|end"
+        tools:text="22"/>
+</LinearLayout>

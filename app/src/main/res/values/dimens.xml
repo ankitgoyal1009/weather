@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="dimens">12dp</dimen>
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="height_44dp">44dp</dimen>
+    <dimen name="height_56dp">56dp</dimen>
+    <dimen name="height_62dp">62dp</dimen>
+    <dimen name="height_80dp">80dp</dimen>
+    <dimen name="height_96dp">96dp</dimen>
+    <dimen name="font_16sp">16sp</dimen>
+    <dimen name="font_36sp">36sp</dimen>
+    <dimen name="font_54sp">54sp</dimen>
+    <dimen name="font_96sp">96sp</dimen>
 </resources>
