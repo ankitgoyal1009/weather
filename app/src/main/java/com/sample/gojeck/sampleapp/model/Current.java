@@ -1,11 +1,18 @@
 package com.sample.gojeck.sampleapp.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Current {
-    private Integer lastUpdatedEpoch;
+    @SerializedName("last_updated_epoch")
+    private long lastUpdatedEpoch;
+
+    @SerializedName("last_updated")
     private String lastUpdated;
+
+    @SerializedName("temp_c")
     private Double tempC;
 
-    public Integer getLastUpdatedEpoch() {
+    public long getLastUpdatedEpoch() {
         return lastUpdatedEpoch;
     }
 

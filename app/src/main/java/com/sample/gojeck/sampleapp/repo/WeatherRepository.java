@@ -3,16 +3,22 @@ package com.sample.gojeck.sampleapp.repo;
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.support.annotation.NonNull;
+import android.util.Log;
 
 import com.sample.gojeck.sampleapp.enums.Status;
+import com.sample.gojeck.sampleapp.model.Error;
 import com.sample.gojeck.sampleapp.model.StatusAwareResponse;
 import com.sample.gojeck.sampleapp.model.Weather;
 import com.sample.gojeck.sampleapp.network.RetroClient;
 
+import java.io.IOException;
+import java.lang.annotation.Annotation;
 import java.util.concurrent.Executor;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
+import retrofit2.Converter;
 import retrofit2.Response;
 
 public class WeatherRepository {
@@ -39,9 +45,9 @@ public class WeatherRepository {
         }.execute(new Runnable() {
             @Override
             public void run() {
-                StatusAwareResponse<Weather> loadinResponse = new StatusAwareResponse<>();
-                loadinResponse.setStatus(Status.loading);
-                weatherResponse.postValue(loadinResponse);
+                StatusAwareResponse<Weather> loadingResponse = new StatusAwareResponse<>();
+                loadingResponse.setStatus(Status.loading);
+                weatherResponse.postValue(loadingResponse);
                 fetchForecastFromWebService(query, forecastDays, weatherResponse);
             }
         });
@@ -49,16 +55,33 @@ public class WeatherRepository {
     }
 
     private void fetchForecastFromWebService(String query, int forecastDays, final MutableLiveData<StatusAwareResponse<Weather>> weatherResponse) {
-        Call<Weather> weatherForecast = RetroClient.getWeatherApi().getWeatherForecast(query, forecastDays, "f3f6483879154b8f98c174328191306");
+        Call<Weather> weatherForecast = RetroClient.getWeatherApi().getWeatherForecast(query, forecastDays, "f3f6483879154b8f98c174328191306-1");
         weatherForecast.enqueue(new Callback<Weather>() {
             @Override
             public void onResponse(Call<Weather> call, Response<Weather> response) {
-                //TODO http status and handle error case
-                StatusAwareResponse<Weather> succesResponse = new StatusAwareResponse<>();
-                succesResponse.setStatus(Status.success);
-                succesResponse.setData(response.body());
-                weatherResponse.postValue(succesResponse);
+                if (response.errorBody() != null) {
+                    Converter<ResponseBody, Error> errorConverter =
+                            RetroClient.getRetrofitInstance().responseBodyConverter(Error.class, new Annotation[0]);
+                    Error error;
+                    try {
+                        error = errorConverter.convert(response.errorBody());
+                    } catch (IOException e) {
+                        Log.e("WeatherRepository", "IOException while parsing error body");
+                        onFailure(call, e);
+                        return;
+                    }
 
+                    StatusAwareResponse<Weather> failureResponse = new StatusAwareResponse<>();
+                    failureResponse.setStatus(Status.failed);
+                    failureResponse.setError(error);
+                    weatherResponse.postValue(failureResponse);
+                    return;
+                }
+
+                StatusAwareResponse<Weather> successResponse = new StatusAwareResponse<>();
+                successResponse.setStatus(Status.success);
+                successResponse.setData(response.body());
+                weatherResponse.postValue(successResponse);
             }
 
             @Override
@@ -70,8 +93,7 @@ public class WeatherRepository {
         });
     }
 
-    public LiveData<StatusAwareResponse<Weather>> getWeatherForecast(double lattitude, double longitude, int noOfDays) {
-        return getWeatherForecast(lattitude + "," + longitude, noOfDays);
+    public LiveData<StatusAwareResponse<Weather>> getWeatherForecast(double latitude, double longitude, int noOfDays) {
+        return getWeatherForecast(latitude + "," + longitude, noOfDays);
     }
 }
-                                

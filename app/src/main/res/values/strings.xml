@@ -5,4 +5,6 @@
     <string name="font_black" translatable="false">Roboto-Black.ttf</string>
     <string name="error_something_went_wrong">Something went wrong at our end!</string>
     <string name="retry">Retry</string>
+    <string name="temp_unit_suffice">%s C</string>
+    <string name="error_no_data_at_location">Unable to find weather report near you</string>
 </resources>

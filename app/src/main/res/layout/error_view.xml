@@ -18,6 +18,7 @@
         app:fontName="@string/font_thin"/>
 
     <Button
+        android:onClick="retry"
         android:id="@+id/retry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

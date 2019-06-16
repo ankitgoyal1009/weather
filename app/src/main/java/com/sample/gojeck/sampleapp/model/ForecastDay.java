@@ -1,15 +1,20 @@
 package com.sample.gojeck.sampleapp.model;
 
+import com.google.gson.annotations.SerializedName;
+
 public class ForecastDay {
     private String date;
-    private Integer dateEpoch;
+
+    @SerializedName("date_epoch")
+    private long dateEpoch;
+
     private Day day;
 
     public String getDate() {
         return date;
     }
 
-    public Integer getDateEpoch() {
+    public long getDateEpoch() {
         return dateEpoch;
     }
 

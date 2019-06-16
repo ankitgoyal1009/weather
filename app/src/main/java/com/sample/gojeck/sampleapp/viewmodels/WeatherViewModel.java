@@ -18,7 +18,7 @@ public class WeatherViewModel extends AndroidViewModel {
         weatherRepository = WeatherRepository.getInstance();
     }
 
-    public LiveData<StatusAwareResponse<Weather>> getWetherForecast(double latitude, double longitude, int noOfDays) {
+    public LiveData<StatusAwareResponse<Weather>> getWeatherForecast(double latitude, double longitude, int noOfDays) {
         return weatherRepository.getWeatherForecast(latitude, longitude, noOfDays);
     }
 }
