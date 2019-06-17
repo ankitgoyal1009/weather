@@ -49,13 +49,13 @@
             android:layout_alignParentBottom="true"
             android:layout_below="@id/city"
             android:layout_marginTop="@dimen/height_62dp"
+            android:background="@android:color/white"
             android:padding="@dimen/padding_16dp">
 
             <LinearLayout
                 android:id="@+id/forecast_container"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@android:color/white"
                 android:orientation="vertical"/>
         </ScrollView>
     </RelativeLayout>
