@@ -7,4 +7,10 @@
     <string name="retry">Retry</string>
     <string name="temp_unit_suffice">%s C</string>
     <string name="error_no_data_at_location">Unable to find weather report near you</string>
+    <string name="install_play_store">You need to install Google Play Services to use the App properly</string>
+    <string name="no_location_turn_on_gps">No Location available, please turn on GPS.</string>
+    <string name="error_permission_needed">These permissions are mandatory to get your location. You need to allow them.</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="error_please_enable_gps">Please enable Location settings...!!!</string>
 </resources>
