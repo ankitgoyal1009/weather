@@ -1,4 +1,4 @@
-package com.sample.gojeck.sampleapp;
+package com.sample.weatherapp;
 
 import android.Manifest;
 import android.arch.lifecycle.Observer;
@@ -40,14 +40,14 @@ import com.google.android.gms.location.SettingsClient;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
-import com.sample.gojeck.sampleapp.enums.Status;
-import com.sample.gojeck.sampleapp.model.BaseError;
-import com.sample.gojeck.sampleapp.model.Error;
-import com.sample.gojeck.sampleapp.model.ForecastDay;
-import com.sample.gojeck.sampleapp.model.StatusAwareResponse;
-import com.sample.gojeck.sampleapp.model.Weather;
-import com.sample.gojeck.sampleapp.view.CustomTextView;
-import com.sample.gojeck.sampleapp.viewmodels.WeatherViewModel;
+import com.sample.weatherapp.weatherapp.R;
+import com.sample.weatherapp.enums.Status;
+import com.sample.weatherapp.model.BaseError;
+import com.sample.weatherapp.model.Error;
+import com.sample.weatherapp.model.ForecastDay;
+import com.sample.weatherapp.model.StatusAwareResponse;
+import com.sample.weatherapp.model.Weather;
+import com.sample.weatherapp.view.CustomTextView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;

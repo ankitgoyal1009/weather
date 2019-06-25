@@ -1,4 +1,4 @@
-package com.sample.gojeck.sampleapp.model;
+package com.sample.weatherapp.model;
 
 import com.google.gson.annotations.SerializedName;
 

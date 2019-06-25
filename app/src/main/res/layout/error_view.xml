@@ -6,7 +6,7 @@
                 android:background="@color/error_background"
                 android:padding="@dimen/padding_16dp">
 
-    <com.sample.gojeck.sampleapp.view.CustomTextView
+    <com.sample.weatherapp.view.CustomTextView
         android:id="@+id/error_msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

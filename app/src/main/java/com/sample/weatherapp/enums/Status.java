@@ -1,4 +1,4 @@
-package com.sample.gojeck.sampleapp.enums;
+package com.sample.weatherapp.enums;
 
 public enum Status {
     loading, success, failed

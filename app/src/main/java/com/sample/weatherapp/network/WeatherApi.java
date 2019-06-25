@@ -1,6 +1,6 @@
-package com.sample.gojeck.sampleapp.network;
+package com.sample.weatherapp.network;
 
-import com.sample.gojeck.sampleapp.model.Weather;
+import com.sample.weatherapp.model.Weather;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

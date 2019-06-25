@@ -1,6 +1,6 @@
-package com.sample.gojeck.sampleapp.model;
+package com.sample.weatherapp.model;
 
-import com.sample.gojeck.sampleapp.enums.Status;
+import com.sample.weatherapp.enums.Status;
 
 public class StatusAwareResponse<T> {
     private Status status;

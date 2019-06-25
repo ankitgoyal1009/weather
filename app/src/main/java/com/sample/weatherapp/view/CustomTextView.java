@@ -1,4 +1,4 @@
-package com.sample.gojeck.sampleapp.view;
+package com.sample.weatherapp.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -6,7 +6,7 @@ import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import com.sample.gojeck.sampleapp.R;
+import com.sample.weatherapp.weatherapp.R;
 
 public class CustomTextView extends TextView {
 

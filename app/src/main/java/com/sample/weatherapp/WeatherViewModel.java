@@ -1,13 +1,13 @@
-package com.sample.gojeck.sampleapp.viewmodels;
+package com.sample.weatherapp;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 import android.support.annotation.NonNull;
 
-import com.sample.gojeck.sampleapp.model.StatusAwareResponse;
-import com.sample.gojeck.sampleapp.model.Weather;
-import com.sample.gojeck.sampleapp.repo.WeatherRepository;
+import com.sample.weatherapp.model.StatusAwareResponse;
+import com.sample.weatherapp.model.Weather;
+import com.sample.weatherapp.repo.WeatherRepository;
 
 public class WeatherViewModel extends AndroidViewModel {
 

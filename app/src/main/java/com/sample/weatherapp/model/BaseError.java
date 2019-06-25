@@ -1,4 +1,4 @@
-package com.sample.gojeck.sampleapp.model;
+package com.sample.weatherapp.model;
 
 public class BaseError extends Throwable {
     private String code;

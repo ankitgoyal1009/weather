@@ -4,7 +4,7 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             tools:context=".MainActivity">
+             tools:context="com.sample.weatherapp.MainActivity">
 
     <ProgressBar
         android:id="@+id/loading"
@@ -21,7 +21,7 @@
         android:background="@color/background"
         android:visibility="gone">
 
-        <com.sample.gojeck.sampleapp.view.CustomTextView
+        <com.sample.weatherapp.view.CustomTextView
             android:id="@+id/today_temp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
             app:fontName="@string/font_black"
             tools:text="21"/>
 
-        <com.sample.gojeck.sampleapp.view.CustomTextView
+        <com.sample.weatherapp.view.CustomTextView
             android:id="@+id/city"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

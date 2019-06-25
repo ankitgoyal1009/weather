@@ -1,15 +1,15 @@
-package com.sample.gojeck.sampleapp.repo;
+package com.sample.weatherapp.repo;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.lifecycle.MutableLiveData;
 import android.support.annotation.NonNull;
 import android.util.Log;
 
-import com.sample.gojeck.sampleapp.enums.Status;
-import com.sample.gojeck.sampleapp.model.Error;
-import com.sample.gojeck.sampleapp.model.StatusAwareResponse;
-import com.sample.gojeck.sampleapp.model.Weather;
-import com.sample.gojeck.sampleapp.network.RetroClient;
+import com.sample.weatherapp.enums.Status;
+import com.sample.weatherapp.model.Error;
+import com.sample.weatherapp.model.StatusAwareResponse;
+import com.sample.weatherapp.model.Weather;
+import com.sample.weatherapp.network.RetroClient;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;

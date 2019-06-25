@@ -1,4 +1,4 @@
-package com.sample.gojeck.sampleapp;
+package com.sample.weatherapp.weatherapp;
 
 import org.junit.Test;
 

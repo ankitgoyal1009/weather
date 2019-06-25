@@ -1,4 +1,4 @@
-package com.sample.gojeck.sampleapp.view;
+package com.sample.weatherapp.view;
 
 import android.content.Context;
 import android.content.res.AssetManager;

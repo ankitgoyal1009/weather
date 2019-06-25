@@ -1,4 +1,4 @@
-package com.sample.gojeck.sampleapp.network;
+package com.sample.weatherapp.network;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
