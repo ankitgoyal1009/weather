@@ -55,7 +55,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 
-public class MainActivity extends AppCompatActivity /*implements GoogleApiClient.ConnectionCallbacks*/ {
+public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private static final String ERROR_CODE_NO_DATA_AT_LOCATION = "1003";
     private static final String ERROR_CODE_DEFAULT_ERROR = "1000";

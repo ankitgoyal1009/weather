@@ -55,7 +55,7 @@ public class WeatherRepository {
     }
 
     private void fetchForecastFromWebService(String query, int forecastDays, final MutableLiveData<StatusAwareResponse<Weather>> weatherResponse) {
-        Call<Weather> weatherForecast = RetroClient.getWeatherApi().getWeatherForecast(query, forecastDays, "f3f6483879154b8f98c174328191306");
+        Call<Weather> weatherForecast = RetroClient.getWeatherApi().getWeatherForecast(query, forecastDays, "<YOUR API KEY>");
         weatherForecast.enqueue(new Callback<Weather>() {
             @Override
             public void onResponse(Call<Weather> call, Response<Weather> response) {
